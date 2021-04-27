@@ -13,14 +13,13 @@ function darkMode(){
   
 }
 
-
-// programme
+// vérifie si l'élément theme existe
 if (localStorage.getItem('theme')) {
   // valeur = sombre ?
+  if (localStorage.getItem('theme') == 'dark') {
     // oui : on apelle le mode sombre
-    // non : rien
-} else {
-  // rien
+    darkMode();
+  }
 }
 
 // detection du clic
@@ -36,6 +35,3 @@ button.addEventListener('click', () => {
     darkMode();
   }
 });
-
-
-
